@@ -1,0 +1,42 @@
+{
+    "rules": {
+        "type": "ALL",
+        "rules": [
+            { "name": "Shorter Side", "conditions": [{ "greaterThan": 4 }] },
+            { "name": "Longer Side", "conditions": [{ "greaterThan": 4 }] },
+            {
+                "type": "ANY",
+                "rules": [
+                    { "name": "Folding", "conditions": [{ "isSpecified": true }] },
+                    { "name": "Scoring", "conditions": [{ "isSpecified": true }] },
+                    {
+                        "type": "ALL",
+                        "rules": [
+                            { "name": "Perforation", "conditions": [{ "isSpecified": true }] },
+                            { "name": "Booklet Folding", "conditions": [{ "isSpecified": true }] }
+                        ]
+                    },
+                    {
+                        "type": "ANY",
+                        "rules": [
+                            { "name": "Perforation1", "conditions": [{ "isSpecified": true }] },
+                            {
+                                "type": "ANY",
+                                "rules": [
+                                    { "name": "Perforation2", "conditions": [{ "isSpecified": true }] },
+                                    {
+                                        "type": "ANY",
+                                        "rules": [
+                                            { "name": "Perforation3", "conditions": [{ "isSpecified": true }] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+
