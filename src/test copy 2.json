@@ -1,0 +1,59 @@
+{
+    "rules": {
+        "type": "ANY",
+        "rules": [
+            { "name": "1", "conditions": [{ "greaterThan": 4 }] },
+            {
+                "type": "ALL",
+                "rules": [
+                    {
+                        "type": "ALL",
+                        "rules": [
+                            { "name": "2", "conditions": [{ "isSpecified": true }] },
+                            {
+                                "type": "ANY",
+                                "rules": [
+                                    { "name": "3", "conditions": [{ "isSpecified": true }] }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ANY",
+                        "rules": [
+                            { "name": "4", "conditions": [{ "isSpecified": true }] },
+                            { "name": "5", "conditions": [{ "isSpecified": true }] }
+                        ]
+                    },
+                    { "name": "6", "conditions": [{ "isSpecified": true }] }
+                ]
+            },
+            {
+                "type": "NONE",
+                "rules": [
+                    {
+                        "type": "ALL",
+                        "rules": [
+                            { "name": "2", "conditions": [{ "isSpecified": true }] },
+                            {
+                                "type": "ANY",
+                                "rules": [
+                                    { "name": "3", "conditions": [{ "isSpecified": true }] }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ANY",
+                        "rules": [
+                            { "name": "4", "conditions": [{ "isSpecified": true }] },
+                            { "name": "5", "conditions": [{ "isSpecified": true }] }
+                        ]
+                    },
+                    { "name": "6", "conditions": [{ "isSpecified": true }] }
+                ]
+            }
+        ]
+    }
+}
+

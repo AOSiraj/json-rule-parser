@@ -2,32 +2,178 @@
     "rules": {
         "type": "ALL",
         "rules": [
-            { "name": "Shorter Side", "conditions": [{ "greaterThan": 4 }] },
-            { "name": "Longer Side", "conditions": [{ "greaterThan": 4 }] },
             {
-                "type": "ANY",
+                "type": "NONE",
                 "rules": [
-                    { "name": "Folding", "conditions": [{ "isSpecified": true }] },
-                    { "name": "Scoring", "conditions": [{ "isSpecified": true }] },
                     {
                         "type": "ALL",
                         "rules": [
-                            { "name": "Perforation", "conditions": [{ "isSpecified": true }] },
-                            { "name": "Booklet Folding", "conditions": [{ "isSpecified": true }] }
-                        ]
-                    },
-                    {
-                        "type": "ANY",
-                        "rules": [
-                            { "name": "Perforation1", "conditions": [{ "isSpecified": true }] },
+                            { "name": "Die-Cutting", "conditions": [{ "stringContains": "Round" }] },
                             {
                                 "type": "ANY",
                                 "rules": [
-                                    { "name": "Perforation2", "conditions": [{ "isSpecified": true }] },
                                     {
-                                        "type": "ANY",
+                                        "type": "ALL",
                                         "rules": [
-                                            { "name": "Perforation3", "conditions": [{ "isSpecified": true }] }
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "1.5" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "2.5" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "2" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "2" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "2" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "3.5" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "2.5" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "3.5" }] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ALL",
+                        "rules": [
+                            { "name": "Die-Cutting", "conditions": [{ "stringContains": "Leaf" }] },
+                            { "name": "Shorter Side", "conditions": [{ "equals": "2" }] },
+                            { "name": "Longer Side", "conditions": [{ "equals": "3.5" }] }
+                        ]
+                    },
+                    {
+                        "type": "ALL",
+                        "rules": [
+                            { "name": "Die-Cutting", "conditions": [{ "stringContains": "Half-Circle" }] },
+                            { "name": "Shorter Side", "conditions": [{ "equals": "2" }] },
+                            { "name": "Longer Side", "conditions": [{ "equals": "3.5" }] }
+                        ]
+                    },
+                    {
+                        "type": "ALL",
+                        "rules": [
+                            { "name": "Die-Cutting", "conditions": [{ "stringContains": "Oval" }] },
+                            {
+                                "type": "ANY",
+                                "rules": [
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "1.5" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "2.5" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "2" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "3" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "2" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "3.5" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "3" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "4" }] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ALL",
+                        "rules": [
+                            { "name": "Die-Cutting", "conditions": [{ "stringContains": "Circle" }] },
+                            {
+                                "type": "ANY",
+                                "rules": [
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "2" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "2" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "2.5" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "2.5" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "3" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "3" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "4" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "4" }] }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ALL",
+                        "rules": [
+                            {
+                                "name": "Round Cornering",
+                                "conditions": [{ "stringContains": "1/8\u0022 Corner" }]
+                            },
+                            {
+                                "type": "ANY",
+                                "rules": [
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "1.5" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "2.5" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "2" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "2" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "2" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "3.5" }] }
+                                        ]
+                                    },
+                                    {
+                                        "type": "ALL",
+                                        "rules": [
+                                            { "name": "Shorter Side", "conditions": [{ "equals": "2.5" }] },
+                                            { "name": "Longer Side", "conditions": [{ "equals": "3.5" }] }
                                         ]
                                     }
                                 ]
@@ -36,7 +182,7 @@
                     }
                 ]
             }
+            
         ]
     }
 }
-
